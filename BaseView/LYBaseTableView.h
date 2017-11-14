@@ -11,6 +11,12 @@
 
 typedef void(^BaseTableViewPushBlock)(UIViewController *goalViewController, BOOL needLogin, BOOL needCustomReturnBlock);
 
+//scrollView滑动方向
+typedef NS_ENUM(NSInteger, ScrollDirection) {
+    ScrollDirectionUp,      //向上滚动(手指往下滑动)
+    ScrollDirectionDown     //向下滚动(手指往上滑动)
+};
+
 @protocol LYBaseTableViewDelegate;
 
 @interface LYBaseTableView : UIView<UITableViewDataSource, UITableViewDelegate>
